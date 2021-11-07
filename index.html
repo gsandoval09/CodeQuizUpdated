@@ -1,54 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href=".assets/styles.css">
-    <title> Quiz Game!!</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <title> Quiz Game!!</title>
 
 </head>
+
 <body>
-   
+  <div id="center">
     <header>
-     <div id="timer"> </div>
+      <div id="timer">00:00</div>
     </header>
-  
-    <button id="startButton" type="button">start</button>
+    <p id="questionContainer">
+      <button id="answerButton" type="button">start</button>
+    </p>
+  </div>
 
-  
-    <div class="container">
-    
-         <div id="question"> Question </div>
-        
-                  <div id="question">What is Captain Americas shield made of?</div>
-                  <div id="answer-buttons" class="btn-grid">
-                    <button class="btn">Vibranium</button>
-                    <button class="btn">Adamantium</button>
-                    <button class="btn">Kryptonite</button>
-                    <button class="btn">Pizza</button>
-                  </div>
-                </div>
-                
-                  <button id="start-button" class="start-btn btn">Start</button>
-                  <button id="next-btn" class="next-btn btn hide">Next</button>
-                </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </div>
+  <script src="./assets/script.js">
 
-
-
-<script src= "./script.js">
-
-</script>   
+  </script>
 </body>
+
 </html>
