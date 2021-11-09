@@ -45,7 +45,7 @@ function startTimer(duration) {
         minutes = parseInt(timer / 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = parseInt(timer % 60, 10);
-        seconds =  seconds < 10 ? "0" + seconds : seconds;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
         timerElement.textContent = `${minutes}:${seconds}`;
         if (timer > 0) {
             timer--
@@ -74,18 +74,20 @@ function showQuestions() {
 }
 function answerQuestion(answer) {
     var currentQuestion = questionList[currentIndex];
-    var isCorrect =(answer == currentQuestion.answer);
+    var isCorrect = (answer == currentQuestion.answer);
     if (isCorrect) {
         score++;
-    }  
-    else {
-        timer-= 30;
     }
-   
+    else {
+        timer -= 30;
+    }
+
     currentIndex++;
-    if (currentIndex>= questionList.length) {
+    if (currentIndex >= questionList.length) {
         document.getElementById('questionContainer').innerHTML = `${score}/${questionList.length}`;
         clearInterval(interval);
+        window.localStorage.setItem('score',score)
+        document.getElementById('lastScore').innerHTML = `Last Score: ${score}`;
     }
     else {
         document.getElementById('questionContainer').innerHTML = `
@@ -100,8 +102,10 @@ function startQuiz() {
     startTimer(60 * 5);
     showQuestions();
 }
-
-
+if(window.localStorage.getItem('score') !== null){
+    
+    document.getElementById('lastScore').innerHTML = `Last Score: ${window.localStorage.getItem('score')}`;
+}
 // new function made to read if answer is wrong, if answer wrong, less time for quiz, will display the next question once answered
 
 // another function showing end highscore if all questions answered and/or if timer ends
