@@ -30,6 +30,7 @@
   white-space: nowrap;
 }
 
+/* Button sections target the color of what the button will show like in terms of color */
 #answerButton:focus:not(:focus-visible):not(.focus-visible) {
   box-shadow: none;
   outline: none;
