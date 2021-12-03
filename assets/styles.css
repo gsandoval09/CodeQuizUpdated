@@ -4,11 +4,12 @@
     text-align: center;
     top: 50%;
 }
-
+/*background of entire site */ 
 body {
   background-color: #5456c2;
 }
 
+/*answer button componets listing color and sizign feature of the button */
 #answerButton {
   appearance: none;
   background-color: #2ea44f;

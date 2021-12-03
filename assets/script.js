@@ -82,7 +82,7 @@ function answerQuestion(answer) {
     else {
         timer -= 30;
     }
-
+// keeps track of current score based on questions answered when user proceeds from one question to another
     currentIndex++;
     if (currentIndex >= questionList.length) {
         document.getElementById('questionContainer').innerHTML = `${score}/${questionList.length}`;
