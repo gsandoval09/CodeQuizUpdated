@@ -5,6 +5,10 @@
     top: 50%;
 }
 
+body {
+  background-color: #5456c2;
+}
+
 #answerButton {
   appearance: none;
   background-color: #2ea44f;

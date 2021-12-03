@@ -72,6 +72,7 @@ function showQuestions() {
 
     document.getElementById("questionContainer").innerHTML = temp;
 }
+// everytime the user answers the question correctly, their time is safe however everytime they answer wrong, their time is deducted from the timer.
 function answerQuestion(answer) {
     var currentQuestion = questionList[currentIndex];
     var isCorrect = (answer == currentQuestion.answer);
